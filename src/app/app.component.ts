@@ -10,4 +10,14 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'portfolio';
+
+
+  updateLightPosition(event: MouseEvent): void {
+    const light = document.getElementById('light');
+    if (light) { // Esta es la comprobación de seguridad
+      light.style.left = event.pageX + 'px';
+      light.style.top = event.pageY + 'px';
+    }
+  }
+
 }
